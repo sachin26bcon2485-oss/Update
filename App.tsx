@@ -32,8 +32,27 @@ import {
   CERTIFICATIONS_DATA,
   ProjectItem,
 } from './data/portfolioData';
-import { DeveloperVisual } from './components/DeveloperVisual';
-import { ProjectModal } from './components/ProjectModal';
+const DeveloperVisual = () => (
+  <div className="p-6 rounded-2xl border border-slate-800 bg-[#111726] font-mono text-xs text-blue-400">
+    // Developer Visual Loaded
+  </div>
+);
+
+const ProjectModal = ({ project, onClose }: any) => {
+  if (!project) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60">
+      <div className="bg-[#111726] border border-slate-800 p-6 rounded-2xl text-white max-w-md w-full">
+        <h3 className="text-lg font-bold mb-2">{project.title}</h3>
+        <p className="text-sm text-slate-400 mb-4">{project.shortDescription}</p>
+        <button onClick={onClose} className="px-4 py-2 bg-blue-600 rounded-lg text-xs font-semibold">
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
 
 export default function App() {
   const [isDark, setIsDark] = useState<boolean>(true);
