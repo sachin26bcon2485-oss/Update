@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Doodhwal | B.Tech CSE Student & Aspiring Software Developer</title>
+  <meta name="description" content="Personal portfolio of Sachin Doodhwal, first-year B.Tech Computer Science & Engineering student at JECRC University, Jaipur, Rajasthan. Interested in programming, software development, and Artificial Intelligence." />
+  <meta property="og:title" content="Sachin Doodhwal | B.Tech CSE Student & Aspiring Software Developer" />
+  <meta property="og:description" content="1st Year B.Tech CSE Student at JECRC University, Jaipur. Exploring C, C++, Python, Web Development, and AI/ML." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Syne', sans-serif; }
+    code, pre, .font-mono { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#F8FAFC] dark:bg-[#0B0F19] text-[#0F172A] dark:text-[#F8FAFC] transition-colors duration-200 selection:bg-blue-600 selection:text-white">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="hidden fixed bottom-5 right-5 z-50 max-w-md rounded-xl border px-4 py-3 shadow-lg flex items-start gap-3 text-xs sm:text-sm bg-white dark:bg-[#111726] border-blue-300 dark:border-blue-500/40 text-slate-800 dark:text-slate-100">
+    <span id="toast-text" class="font-medium flex-1"></span>
+    <button onclick="document.getElementById('toast').classList.add('hidden')" class="text-slate-400 hover:text-slate-200 font-bold">✕</button>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur-md border-b bg-[#F8FAFC]/85 dark:bg-[#0B0F19]/85 border-slate-200/80 dark:border-slate-800/80 transition-colors">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#home" class="text-lg font-bold font-display tracking-tight whitespace-nowrap">Sachin Doodhwal</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-slate-900 dark:hover:text-white hover:underline underline-offset-4">About</a>
+        <a href="#education" class="hover:text-slate-900 dark:hover:text-white hover:underline underline-offset-4">Education</a>
+        <a href="#skills" class="hover:text-slate-900 dark:hover:text-white hover:underline underline-offset-4">Skills</a>
+        <a href="#projects" class="hover:text-slate-900 dark:hover:text-white hover:underline underline-offset-4">Projects</a>
+        <a href="#contact" class="hover:text-slate-900 dark:hover:text-white hover:underline underline-offset-4">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <button id="theme-toggle" aria-label="Toggle dark/light theme" class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700 text-xs font-mono">
+          Theme
+        </button>
+        <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-lg transition-all whitespace-nowrap">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HOME / HERO -->
+    <section id="home" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 border-b border-slate-200/70 dark:border-slate-800/70">
+      <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[680px] h-[340px] bg-gradient-to-tr from-blue-600/15 via-indigo-500/10 to-purple-600/15 blur-3xl rounded-full"></div>
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-medium text-blue-700 dark:text-blue-400">
+              <span>1st Year B.Tech CSE Student at JECRC University, Jaipur</span>
+              <span class="text-slate-400">·</span>
+              <span class="text-slate-600 dark:text-slate-400">1st Semester</span>
+            </div>
+            <div class="space-y-3">
+              <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-extrabold font-display tracking-tight leading-[1.12]">
+                Hi, I'm <span class="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">Sachin Doodhwal</span>
+              </h1>
+              <p class="text-lg sm:text-xl font-semibold tracking-tight text-slate-800 dark:text-slate-200">
+                B.Tech CSE Student | Aspiring Software Developer
+              </p>
+            </div>
+            <p class="text-base sm:text-lg leading-relaxed max-w-2xl text-slate-600 dark:text-slate-300">
+              I am a first-year Computer Science and Engineering student interested in programming, software development, Artificial Intelligence and emerging technologies.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#projects" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-md shadow-blue-600/20 transition-all">
+                View My Projects
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-semibold border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#111726] text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                Contact Me
+              </a>
+            </div>
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              <div><strong class="text-slate-900 dark:text-slate-200">Course:</strong> B.Tech CSE (1st Year)</div>
+              <span>·</span>
+              <div><strong class="text-slate-900 dark:text-slate-200">University:</strong> JECRC University, Jaipur</div>
+              <span>·</span>
+              <div><strong class="text-slate-900 dark:text-slate-200">Focus:</strong> C, C++, Python &amp; AI/ML</div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl border bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800/90 shadow-xl overflow-hidden">
+              <div class="flex items-center justify-between px-4 py-3 border-b bg-slate-50 dark:bg-[#0D121F] border-slate-200 dark:border-slate-800">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-slate-400/40"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-slate-400/40"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-slate-400/40"></span>
+                  <span class="ml-2 text-xs font-mono text-slate-500 dark:text-slate-400">student_profile.c</span>
+                </div>
+              </div>
+              <div class="p-5 overflow-x-auto">
+<pre class="text-xs sm:text-[13px] leading-relaxed font-mono text-slate-800 dark:text-slate-200"><code>// student_profile.c — JECRC University, Jaipur
+#include &lt;stdio.h&gt;
+
+struct StudentDeveloper {
+    const char *name;
+    const char *degree;
+    const char *standing;
+    const char *institution;
+};
+
+int main(void) {
+    struct StudentDeveloper sachin = {
+        .name        = "Sachin Doodhwal",
+        .degree      = "B.Tech Computer Science &amp; Engineering",
+        .standing    = "1st Year, 1st Semester",
+        .institution = "JECRC University, Jaipur"
+    };
+
+    printf("Hello! I am %s.\n", sachin.name);
+    printf("Building strong programming fundamentals.\n");
+    return 0;
+}</code></pre>
+              </div>
+              <div class="px-5 py-3 border-t bg-slate-50 dark:bg-[#0D121F]/80 border-slate-200/80 dark:border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 dark:text-slate-400">
+                <div>B.Tech CSE · 1st Year (Sem 1) · JECRC University</div>
+                <span class="font-mono text-[11px] text-blue-600 dark:text-blue-400">Jaipur, Rajasthan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME -->
+    <section id="about" class="py-16 md:py-24 border-b border-slate-200/70 dark:border-slate-800/70">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div class="lg:col-span-4 space-y-3">
+            <p class="text-xs font-mono text-blue-600 dark:text-blue-400">01. Introduction</p>
+            <h2 class="text-2xl sm:text-3xl font-bold font-display tracking-tight">About Me</h2>
+            <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+              A genuine look at my academic background, current learning focus, and interest in software engineering.
+            </p>
+          </div>
+          <div class="lg:col-span-8 space-y-8">
+            <div class="space-y-4 text-base leading-relaxed text-slate-700 dark:text-slate-300">
+              <p>
+                Hello! I am <strong class="font-semibold text-slate-900 dark:text-white">Sachin Doodhwal</strong>, a first-year B.Tech Computer Science &amp; Engineering student (1st Semester) studying at <strong class="font-semibold text-slate-900 dark:text-white">JECRC University, Jaipur, Rajasthan</strong>.
+              </p>
+              <p>
+                My journey in computer science began with a strong curiosity about how software applications and modern digital tools are built. Right now, I am focused on building strong programming fundamentals—starting with C programming and structured problem-solving—while gradually exploring C++, Python, Data Structures &amp; Algorithms, and Web Development.
+              </p>
+              <p>
+                Beyond core programming, I am deeply interested in Artificial Intelligence, Machine Learning, software development, and emerging future technologies. As a first-year student, I am eager to learn step by step, build practical student projects, and continuously improve my technical skills through coursework and hands-on practice.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border p-6 sm:p-8 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800">
+              <h3 class="text-base font-bold font-display mb-5">Academic Profile Snapshot</h3>
+              <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5 text-sm">
+                <div class="pb-4 border-b border-slate-200/70 dark:border-slate-800">
+                  <dt class="text-xs text-slate-500 dark:text-slate-400 mb-1">Full Name</dt>
+                  <dd class="font-semibold">Sachin Doodhwal</dd>
+                </div>
+                <div class="pb-4 border-b border-slate-200/70 dark:border-slate-800">
+                  <dt class="text-xs text-slate-500 dark:text-slate-400 mb-1">Degree &amp; Branch</dt>
+                  <dd class="font-semibold">B.Tech Computer Science &amp; Engineering</dd>
+                </div>
+                <div class="pb-4 border-b border-slate-200/70 dark:border-slate-800">
+                  <dt class="text-xs text-slate-500 dark:text-slate-400 mb-1">Current Standing</dt>
+                  <dd class="font-semibold font-mono text-blue-600 dark:text-blue-400">1st Year · 1st Semester</dd>
+                </div>
+                <div class="pb-4 border-b border-slate-200/70 dark:border-slate-800">
+                  <dt class="text-xs text-slate-500 dark:text-slate-400 mb-1">University</dt>
+                  <dd class="font-semibold">JECRC University, Jaipur, Rajasthan</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-slate-500 dark:text-slate-400 mb-1">Current Focus</dt>
+                  <dd class="font-medium">Building Programming Fundamentals &amp; Web Basics</dd>
+                </div>
+                <div>
+                  <dt class="text-xs text-slate-500 dark:text-slate-400 mb-1">Future Interests</dt>
+                  <dd class="font-medium">AI/ML, Software Development &amp; Emerging Tech</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EDUCATION -->
+    <section id="education" class="py-16 md:py-24 border-b border-slate-200/70 dark:border-slate-800/70">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12 space-y-2">
+          <p class="text-xs font-mono text-blue-600 dark:text-blue-400">02. Academic Timeline</p>
+          <h2 class="text-2xl sm:text-3xl font-bold font-display tracking-tight">Education</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            My academic pathway from secondary school foundations to undergraduate engineering studies at JECRC University.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 text-xs font-mono mb-4 pb-3 border-b border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold">01. 1st Year · 1st Semester</span>
+                <span>2026 – Present</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display tracking-tight mb-2">B.Tech Computer Science &amp; Engineering</h3>
+              <p class="text-sm font-semibold mb-1 text-slate-800 dark:text-slate-200">JECRC University, Jaipur</p>
+              <p class="text-xs font-mono text-indigo-600 dark:text-indigo-400 mb-4">Undergraduate Degree Program</p>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                Currently pursuing first-year undergraduate coursework in Computer Science &amp; Engineering with a focus on core programming fundamentals, logical problem-solving, and digital &amp; AI literacy.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 text-xs font-mono flex items-center justify-between text-slate-500 dark:text-slate-400">
+              <span>Status: Currently Enrolled</span>
+              <span>1st Year</span>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 text-xs font-mono mb-4 pb-3 border-b border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold">02. Senior Secondary</span>
+                <span>Completed</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display tracking-tight mb-2">Class 12</h3>
+              <p class="text-sm font-semibold mb-1 text-slate-800 dark:text-slate-200">RBSE (Board of Secondary Education, Rajasthan)</p>
+              <p class="text-xs font-mono text-indigo-600 dark:text-indigo-400 mb-4">PCM · Physics, Chemistry, Mathematics</p>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                Completed senior secondary schooling in the Science and Mathematics stream (Physics, Chemistry, Mathematics) under the Rajasthan Board of Secondary Education.
+              </p>
+            </div>
+          </article>
+
+          <article class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 text-xs font-mono mb-4 pb-3 border-b border-slate-100 dark:border-slate-800 text-slate-500 dark:text-slate-400">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold">03. Secondary</span>
+                <span>Completed</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold font-display tracking-tight mb-2">Class 10</h3>
+              <p class="text-sm font-semibold mb-1 text-slate-800 dark:text-slate-200">CBSE (Central Board of Secondary Education)</p>
+              <p class="text-xs font-mono text-indigo-600 dark:text-indigo-400 mb-4">CBSE Curriculum</p>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                Completed secondary school foundation across core academic subjects under the Central Board of Secondary Education.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SKILLS -->
+    <section id="skills" class="py-16 md:py-24 border-b border-slate-200/70 dark:border-slate-800/70">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12 space-y-2">
+          <p class="text-xs font-mono text-blue-600 dark:text-blue-400">03. Honest Learning Progression</p>
+          <h2 class="text-2xl sm:text-3xl font-bold font-display tracking-tight">Skills &amp; Areas of Interest</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            As a first-year B.Tech CSE student, these represent my beginner-level programming foundations, technologies I am currently learning, and areas of future interest.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Programming -->
+          <div class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono text-blue-600 dark:text-blue-400 mb-2">
+              <span>01. Programming</span>
+              <span>Beginner Level</span>
+            </div>
+            <h3 class="text-xl font-bold font-display mb-2">Programming Foundations</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
+              Building a solid foundation in structured programming, syntax discipline, and step-by-step problem decomposition.
+            </p>
+            <div class="divide-y divide-slate-200/70 dark:divide-slate-800">
+              <div class="py-3.5 first:pt-0">
+                <div class="flex justify-between font-semibold text-sm sm:text-base mb-1"><span>C</span><span class="text-xs font-mono text-blue-600 dark:text-blue-400">Beginner</span></div>
+                <p class="text-xs text-slate-600 dark:text-slate-400">Variables, data types, loops, conditional logic, functions, and basic arrays</p>
+              </div>
+              <div class="py-3.5 last:pb-0">
+                <div class="flex justify-between font-semibold text-sm sm:text-base mb-1"><span>Programming Fundamentals</span><span class="text-xs font-mono text-blue-600 dark:text-blue-400">Foundation</span></div>
+                <p class="text-xs text-slate-600 dark:text-slate-400">Flowcharts, dry-run tracing, algorithmic thinking, and console I/O programs</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Currently Learning -->
+          <div class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono text-indigo-600 dark:text-indigo-400 mb-2">
+              <span>02. Currently Learning</span>
+              <span>In Progress</span>
+            </div>
+            <h3 class="text-xl font-bold font-display mb-2">Currently Learning</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
+              Expanding beyond core C syntax into object-oriented concepts, scripting, version control, and modern web structure.
+            </p>
+            <div class="divide-y divide-slate-200/70 dark:divide-slate-800 text-sm">
+              <div class="py-2.5 first:pt-0 flex justify-between"><span class="font-semibold">C++</span><span class="text-xs font-mono text-indigo-600 dark:text-indigo-400">Learning</span></div>
+              <div class="py-2.5 flex justify-between"><span class="font-semibold">Python</span><span class="text-xs font-mono text-indigo-600 dark:text-indigo-400">Learning</span></div>
+              <div class="py-2.5 flex justify-between"><span class="font-semibold">Data Structures &amp; Algorithms</span><span class="text-xs font-mono text-indigo-600 dark:text-indigo-400">Beginner</span></div>
+              <div class="py-2.5 flex justify-between"><span class="font-semibold">Web Development</span><span class="text-xs font-mono text-indigo-600 dark:text-indigo-400">Beginner</span></div>
+              <div class="py-2.5 last:pb-0 flex justify-between"><span class="font-semibold">Git &amp; GitHub</span><span class="text-xs font-mono text-indigo-600 dark:text-indigo-400">Beginner</span></div>
+            </div>
+          </div>
+
+          <!-- Areas of Interest -->
+          <div class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800">
+            <div class="flex items-center justify-between gap-2 text-xs font-mono text-purple-600 dark:text-purple-400 mb-2">
+              <span>03. Areas of Interest</span>
+              <span>Exploration</span>
+            </div>
+            <h3 class="text-xl font-bold font-display mb-2">Areas of Interest</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
+              Domains in computer science that motivate my coursework, reading, and upcoming student projects.
+            </p>
+            <div class="divide-y divide-slate-200/70 dark:divide-slate-800 text-sm">
+              <div class="py-2.5 first:pt-0 flex justify-between"><span class="font-semibold">Artificial Intelligence</span><span class="text-xs font-mono text-purple-600 dark:text-purple-400">Interest</span></div>
+              <div class="py-2.5 flex justify-between"><span class="font-semibold">Machine Learning</span><span class="text-xs font-mono text-purple-600 dark:text-purple-400">Interest</span></div>
+              <div class="py-2.5 flex justify-between"><span class="font-semibold">Software Development</span><span class="text-xs font-mono text-purple-600 dark:text-purple-400">Interest</span></div>
+              <div class="py-2.5 last:pb-0 flex justify-between"><span class="font-semibold">Generative AI</span><span class="text-xs font-mono text-purple-600 dark:text-purple-400">Interest</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS -->
+    <section id="projects" class="py-16 md:py-24 border-b border-slate-200/70 dark:border-slate-800/70">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12 space-y-2">
+          <p class="text-xs font-mono text-blue-600 dark:text-blue-400">04. Academic &amp; Personal Builds</p>
+          <h2 class="text-2xl sm:text-3xl font-bold font-display tracking-tight">Projects</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            Planned and in-progress first-year projects. Full technical specifications and repository links will be updated as builds are completed.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <article class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-3">
+                <span class="font-mono font-semibold text-blue-600 dark:text-blue-400">01</span>
+                <span>·</span>
+                <span>Student Productivity</span>
+                <span>·</span>
+                <span class="italic">Project details coming soon</span>
+              </div>
+              <h3 class="text-xl font-bold font-display tracking-tight mb-3">Student Productivity / Day Planner</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300 mb-6">
+                Project details coming soon. A planned student workflow utility designed to organize daily lecture schedules, assignment deadlines, and study blocks for first-year coursework.
+              </p>
+            </div>
+            <div class="space-y-4 pt-4 border-t border-slate-200/70 dark:border-slate-800">
+              <div class="text-xs font-mono text-slate-600 dark:text-slate-300">HTML · CSS · JavaScript · Web Development</div>
+              <div class="flex flex-wrap items-center gap-2.5">
+                <button onclick="showToast('GitHub repository link is a placeholder and will be added soon.')" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-slate-900 dark:bg-slate-800 text-white hover:opacity-90">GitHub (Placeholder)</button>
+                <button onclick="showToast('Live Demo link is a placeholder and will be added soon.')" class="px-3.5 py-2 rounded-lg text-xs font-medium border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Live Demo (Placeholder)</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-3">
+                <span class="font-mono font-semibold text-blue-600 dark:text-blue-400">02</span>
+                <span>·</span>
+                <span>Web Development</span>
+                <span>·</span>
+                <span class="italic">Project details coming soon</span>
+              </div>
+              <h3 class="text-xl font-bold font-display tracking-tight mb-3">Smart Student Website</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300 mb-6">
+                Project details coming soon. A responsive student web portal concept focused on clean navigation, accessible academic resources, and modern frontend layout practices.
+              </p>
+            </div>
+            <div class="space-y-4 pt-4 border-t border-slate-200/70 dark:border-slate-800">
+              <div class="text-xs font-mono text-slate-600 dark:text-slate-300">HTML5 · CSS3 · Responsive Design · Git &amp; GitHub</div>
+              <div class="flex flex-wrap items-center gap-2.5">
+                <button onclick="showToast('GitHub repository link is a placeholder and will be added soon.')" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-slate-900 dark:bg-slate-800 text-white hover:opacity-90">GitHub (Placeholder)</button>
+                <button onclick="showToast('Live Demo link is a placeholder and will be added soon.')" class="px-3.5 py-2 rounded-lg text-xs font-medium border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Live Demo (Placeholder)</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726] border-slate-200/90 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-3">
+                <span class="font-mono font-semibold text-blue-600 dark:text-blue-400">03</span>
+                <span>·</span>
+                <span>C / C++ / Python</span>
+                <span>·</span>
+                <span class="italic">Project details coming soon</span>
+              </div>
+              <h3 class="text-xl font-bold font-display tracking-tight mb-3">Beginner Programming Projects</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300 mb-6">
+                Project details coming soon. A curated collection of first-semester console programs, logic exercises, and foundational problem-solving scripts written while learning C, C++, and Python.
+              </p>
+            </div>
+            <div class="space-y-4 pt-4 border-t border-slate-200/70 dark:border-slate-800">
+              <div class="text-xs font-mono text-slate-600 dark:text-slate-300">C · C++ · Python · Programming Fundamentals</div>
+              <div class="flex flex-wrap items-center gap-2.5">
+                <button onclick="showToast('GitHub repository link is a placeholder and will be added soon.')" class="px-3.5 py-2 rounded-lg text-xs font-medium bg-slate-900 dark:bg-slate-800 text-white hover:opacity-90">GitHub (Placeholder)</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CERTIFICATIONS & ACHIEVEMENTS -->
+    <section id="certifications" class="py-16 md:py-24 border-b border-slate-200/70 dark:border-slate-800/70">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12 space-y-2">
+          <p class="text-xs font-mono text-blue-600 dark:text-blue-400">05. Milestones &amp; Credentials</p>
+          <h2 class="text-2xl sm:text-3xl font-bold font-display tracking-tight">Certifications &amp; Achievements</h2>
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            Dedicated placeholders for future technical certificates, coding credentials, and college achievements at JECRC University.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726]/70 border-slate-200/90 dark:border-slate-800">
+            <div class="flex justify-between text-xs font-mono mb-4 pb-3 border-b border-slate-100 dark:border-slate-800 text-slate-500">
+              <span>01</span><span class="text-purple-600 dark:text-purple-400 font-medium">Coming Soon</span>
+            </div>
+            <h3 class="text-lg font-bold font-display mb-1.5">Technical Certifications — Coming Soon</h3>
+            <p class="text-xs font-mono text-blue-600 dark:text-blue-400 mb-3">Core Computer Science &amp; Web</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Placeholder for upcoming verified course completions and technical foundation certificates earned during B.Tech CSE coursework.</p>
+          </div>
+
+          <div class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726]/70 border-slate-200/90 dark:border-slate-800">
+            <div class="flex justify-between text-xs font-mono mb-4 pb-3 border-b border-slate-100 dark:border-slate-800 text-slate-500">
+              <span>02</span><span class="text-purple-600 dark:text-purple-400 font-medium">Coming Soon</span>
+            </div>
+            <h3 class="text-lg font-bold font-display mb-1.5">Coding &amp; AI/ML Certifications — Coming Soon</h3>
+            <p class="text-xs font-mono text-blue-600 dark:text-blue-400 mb-3">Programming &amp; Artificial Intelligence</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Placeholder for future certifications in C/C++, Python programming, Data Structures, Artificial Intelligence, and Machine Learning.</p>
+          </div>
+
+          <div class="rounded-2xl border p-6 sm:p-7 bg-white dark:bg-[#111726]/70 border-slate-200/90 dark:border-slate-800">
+            <div class="flex justify-between text-xs font-mono mb-4 pb-3 border-b border-slate-100 dark:border-slate-800 text-slate-500">
+              <span>03</span><span class="text-purple-600 dark:text-purple-400 font-medium">Coming Soon</span>
+            </div>
+            <h3 class="text-lg font-bold font-display mb-1.5">College Activities &amp; Achievements — Coming Soon</h3>
+            <p class="text-xs font-mono text-blue-600 dark:text-blue-400 mb-3">JECRC University, Jaipur</p>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Placeholder for future hackathons, coding club workshops, technical seminars, and academic milestones at JECRC University.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT -->
+    <section id="contact" class="py-16 md:py-24">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6">
+        <div class="rounded-2xl border p-6 sm:p-10 lg:p-12 bg-white dark:bg-[#111726] border-slate-200 dark:border-slate-800">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div class="lg:col-span-7 space-y-6">
+              <div class="space-y-2">
+                <p class="text-xs font-mono text-blue-600 dark:text-blue-400">06. Get In Touch</p>
+                <h2 class="text-2xl sm:text-3xl font-bold font-display tracking-tight">Contact Me</h2>
+                <p class="text-sm sm:text-base max-w-xl text-slate-600 dark:text-slate-300">
+                  Feel free to connect for academic collaborations, student projects, or internship opportunities.
+                </p>
+              </div>
+              <dl class="space-y-4 pt-2 text-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                  <dt class="w-28 text-xs font-mono text-slate-500 dark:text-slate-400">Name</dt>
+                  <dd class="font-semibold text-base">Sachin Doodhwal</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                  <dt class="w-28 text-xs font-mono text-slate-500 dark:text-slate-400">Location</dt>
+                  <dd class="font-medium">Jaipur, Rajasthan, India</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                  <dt class="w-28 text-xs font-mono text-slate-500 dark:text-slate-400">Email</dt>
+                  <dd class="font-mono text-sm">your-email@example.com</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="lg:col-span-5">
+              <div class="p-6 rounded-xl border bg-slate-50 dark:bg-[#0B0F19] border-slate-200/80 dark:border-slate-800 space-y-4">
+                <h3 class="text-sm font-bold font-display">Connect &amp; Profiles</h3>
+                <div class="flex flex-col gap-3">
+                  <button onclick="showToast('GitHub Profile Placeholder: Replace with your actual GitHub URL when ready.')" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-semibold border bg-white dark:bg-[#111726] border-slate-300 dark:border-slate-700 hover:border-blue-500">
+                    <span>GitHub</span>
+                    <span class="text-xs font-mono text-slate-400">Placeholder URL</span>
+                  </button>
+                  <button onclick="showToast('LinkedIn Profile Placeholder: Replace with your actual LinkedIn URL when ready.')" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-semibold border bg-white dark:bg-[#111726] border-slate-300 dark:border-slate-700 hover:border-indigo-500">
+                    <span>LinkedIn</span>
+                    <span class="text-xs font-mono text-slate-400">Placeholder URL</span>
+                  </button>
+                  <a href="mailto:your-email@example.com" class="w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500">
+                    <span>Email Me</span>
+                    <span class="text-xs font-mono text-blue-100">your-email@example.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer class="border-t py-10 text-xs sm:text-sm bg-white dark:bg-[#0B0F19] border-slate-200/80 dark:border-slate-800/80 text-slate-600 dark:text-slate-400">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Sachin Doodhwal. All rights reserved.</p>
+      <nav class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+        <a href="#home" class="hover:underline">Home</a><span>|</span>
+        <a href="#about" class="hover:underline">About</a><span>|</span>
+        <a href="#education" class="hover:underline">Education</a><span>|</span>
+        <a href="#skills" class="hover:underline">Skills</a><span>|</span>
+        <a href="#projects" class="hover:underline">Projects</a><span>|</span>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 3500);
+    }
+  </script>
+</body>
+</html>
